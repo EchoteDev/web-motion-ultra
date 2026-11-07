@@ -37,12 +37,8 @@ Codex's built-in installer can download skills from other repositories. If the s
 Open the website project in your coding agent and ask:
 
 ```text
-Use $web-motion-ultra to bring this page to life.
-Style: editorial and elegant. Intensity: medium.
-Preserve the existing content, structure, and functionality.
-Create a signature moment and supporting microinteractions.
-Adapt the choreography for desktop and touch/mobile.
-Implement the changes and verify the result where tools are available.
+$web-motion-ultra
+Motion intensity: MEDIUM
 ```
 
 Provide the project files or page URL, the sections to work on, and any brand or stack constraints. For an existing site, the default is to enhance its motion while preserving its content and structure.
@@ -135,15 +131,30 @@ This is an illustrative plan, not a recorded benchmark or completed site demo.
 
 ### Choose low, medium, or high intensity
 
-Start with one of the [three ready-to-copy intensity prompts](docs/prompt-cookbook.md#choose-your-motion-intensity):
+The effect direction and desktop/mobile behavior are built into the skill. Invoke it and choose one level:
 
-| Intensity | Result to request | Prompt |
-| --- | --- | --- |
-| **Low** | Subtle polish, small reveals, gentle feedback, stable reading areas | [Low intensity](docs/prompt-cookbook.md#1-low-intensity--subtle-and-refined) |
-| **Medium** | An orchestrated hero, varied reveals, and one signature moment | [Medium intensity](docs/prompt-cookbook.md#2-medium-intensity--balanced-and-engaging) |
-| **High** | Rich, expressive choreography, layered reveals, and distinctive transitions on desktop and mobile | [High intensity](docs/prompt-cookbook.md#3-high-intensity--rich-and-expressive) |
+**LOW** — subtle polish, small reveals, and gentle feedback.
 
-Each prompt explains the intended outcome, desktop/touch adaptation, and verification. Intensity is a creative choice; reduced motion follows the user's accessibility preference at every level.
+```text
+$web-motion-ultra
+Motion intensity: LOW
+```
+
+**MEDIUM** — an orchestrated hero, varied reveals, and one signature moment.
+
+```text
+$web-motion-ultra
+Motion intensity: MEDIUM
+```
+
+**HIGH** — rich, expressive choreography and layered transitions on desktop and mobile.
+
+```text
+$web-motion-ultra
+Motion intensity: HIGH
+```
+
+No extra motion specification is needed when the target project is available. In Claude Code use `/web-motion-ultra`; in other agents select the skill and send the intensity line. See [the short-prompt guide](docs/prompt-cookbook.md#choose-your-motion-intensity). All levels respect the user's actual reduced-motion preference.
 
 ### Enhance an existing site
 

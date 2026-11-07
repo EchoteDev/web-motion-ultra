@@ -1,4 +1,4 @@
 interface:
   display_name: "Web Motion Ultra"
   short_description: "Tailored smooth motion for desktop and mobile"
-  default_prompt: "Use $web-motion-ultra to add tailored animations to this page, preserving its content and structure while adapting motion for mobile and accessibility."
+  default_prompt: "Use $web-motion-ultra. Motion intensity: MEDIUM"

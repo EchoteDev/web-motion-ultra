@@ -62,7 +62,7 @@ You can commit this project-scoped skill folder to share it with your team.
 ## Download without Git
 
 1. Open [Releases](https://github.com/EchoteDev/web-motion-ultra/releases).
-2. Download the `web-motion-ultra-v1.0.0.zip` skill asset for the initial release, or the corresponding asset for a newer release.
+2. Download the `web-motion-ultra-v1.1.0.zip` skill asset, or the corresponding asset for a newer release.
 3. Extract it. The archive contains a `web-motion-ultra` folder with `SKILL.md`, `agents`, and `references` inside.
 4. Move that whole folder into your chosen skills directory.
 
@@ -194,7 +194,7 @@ If your client has no skill loader, ask it to read `skills/web-motion-ultra/SKIL
 4. Copy the new `skills/web-motion-ultra` folder into the same installation location.
 5. Invoke or select the skill using your agent's syntax above; refresh discovery or restart the agent if needed.
 
-For reproducible installs, use a release tag rather than `main`: clone with `git clone --branch v1.0.0 --depth 1 https://github.com/EchoteDev/web-motion-ultra.git`. Check out newer release tags explicitly when updating a tag-based clone.
+For reproducible installs, use a release tag rather than `main`: clone with `git clone --branch v1.1.0 --depth 1 https://github.com/EchoteDev/web-motion-ultra.git`. Check out newer release tags explicitly when updating a tag-based clone.
 
 ## Remove
 

@@ -18,6 +18,61 @@ Infer the mode, objective, audience, affected pages, motion character, intensity
 
 Respect the existing stack and dependencies. For a new page without constraints, start with HTML, CSS, and vanilla JavaScript. Use CSS and IntersectionObserver for simple effects; GSAP with ScrollTrigger for complex sequences, pinning, and scrubbing; Motion/Framer Motion when already used in React or requested. Lenis is optional and must serve the project, not be a prerequisite. Before adding libraries, verify APIs and versions in official documentation. Use the existing package manager or pinned CDN versions, never `latest`.
 
+## Built-in motion intensity profiles
+
+A skill invocation plus one line is a complete motion-enhancement request when a target project or page is available:
+
+```text
+Motion intensity: LOW
+Motion intensity: MEDIUM
+Motion intensity: HIGH
+```
+
+Select one value, case-insensitively. Apply the corresponding profile below without asking the user to repeat its effect choices, mobile requirements, preservation rules, or QA instructions. Infer the target from the active project and established conversation scope; ask for the target only when missing or ambiguous. For an existing page, implement the selected profile through the full workflow unless the user requested only planning or review. Do not merely describe the preset.
+
+An explicit intensity overrides contextual intensity defaults. Treat restrained/subtle as LOW, balanced as MEDIUM, and bold/expressive as HIGH when used as intensity labels. If no intensity is specified, infer it using the concept guidance below. Additional user constraints refine the profile and take precedence over its creative defaults. When changing intensity on an already animated page, retune the existing system instead of stacking another animation layer.
+
+### LOW — subtle and refined
+
+Target: calm, elegant polish with stable composition and unobtrusive motion.
+
+- Keep most of the page still. Apply short, small reveals to selected headings or images, gentle button/link feedback, and smooth local transitions on existing menus, tabs, and accordions.
+- Make the signature moment a discreet detail. Avoid decorative loops, narrative pinning, large displacements, and parallax by default.
+- Use compact timing, minimal stagger, and small travel (roughly 4–12 px where translation is appropriate); do not animate every reading block.
+- Keep body text stable and primary actions immediately visible and usable.
+- On mobile, retain polished tap and disclosure feedback with stable hit areas. LOW is a creative intensity, not forced reduced-motion mode.
+- Prefer native CSS/browser effects and existing dependencies; do not add a library for simple polish.
+
+### MEDIUM — balanced and engaging
+
+Target: visibly animated, cohesive motion with a clear rhythm and one recognizable signature moment.
+
+- Orchestrate the hero with purposeful overlap between heading, supporting content, and main imagery; keep the CTA available immediately.
+- Give headings, images, cards, and lists related but distinct reveals. Avoid identical fade-ups across every section.
+- Refine feedback for existing navigation, buttons, cards, and disclosures. Use measured travel, shared easing, and bounded stagger.
+- Add restrained media parallax or scroll-linked progress only where it helps explain the story. Leave pauses and stable reading areas between beats.
+- On touch/mobile, preserve the concept with shorter travel where useful, native scrolling, and immediate tap feedback; replace pointer-only treatments.
+- Reuse the stack and introduce a choreography library only when the selected effects justify it.
+
+### HIGH — rich and expressive
+
+Target: an ambitious, art-directed experience with rich animation, layered sequences, and fluid continuity on desktop and mobile. HIGH must produce a visibly more expressive treatment than MEDIUM, not merely longer durations.
+
+- Create a strong brand-specific signature moment and layered hero choreography. Consider masked typography, expressive image reveals, depth, and overlapping sequences according to the content.
+- Connect sections through varied transitions and a recognizable motion motif. Select a coherent combination of media parallax, scroll-driven storytelling, shared-element transitions, or a bounded pinned sequence when useful; do not use every effect by default.
+- Use greater visual amplitude and compositional depth where appropriate, with controlled timing and deliberate pauses. Maintain one visual lead at a time, readable body text, and immediately available CTAs.
+- Give existing interactive elements distinctive, interruptible feedback. Preserve native control of scrolling and semantic navigation.
+- Create a rich mobile interpretation too: retain the signature idea through lighter masks, layered reveals, purposeful transitions, and tactile feedback. Replace pointer-only effects; do not silently reduce HIGH to LOW simply because the viewport is narrow.
+- If performance suffers, remove expensive rendering and competing effects first, then simplify while preserving the concept. Explain material compromises rather than promising unmeasured frame rates.
+
+### Shared behavior for every profile
+
+Preserve existing content, information architecture, functionality, and visual identity in enhancement mode. In creation mode, design layout and motion together within the requested brief. Always adapt to desktop and touch, handle interruptions and cleanup, and run relevant verification where tools are available.
+
+Apply the full selected profile when the user has no reduced-motion preference. Respect `prefers-reduced-motion: reduce` or an explicit user request for reduced motion with a complete, readable alternative; do not force that preference merely because LOW is selected or the device is mobile. HIGH does not override an actual accessibility preference.
+
+Use the profile to choose amplitude, effect density, and complexity; the token values below are starting points, not a cap that flattens the differences between profiles. Report the selected level and the actual implementation and checks concisely, without asking the user to restate this specification.
+
 ## Ultra quality standard
 
 Interpret “Ultra” as precise choreography, continuous interactions, and verified desktop and mobile quality. It does not automatically increase intensity, effect count, or dependencies.
@@ -75,7 +130,7 @@ Read [references/implementation-and-qa.md](references/implementation-and-qa.md) 
 - For accordions and other necessary size changes, choose a semantic, measured solution. Do not distort text with `scaleY` just to obey an absolute ban on `height`.
 - Reserve media space and preserve existing transforms through wrappers or composition. Do not introduce layout shifts or accidental horizontal overflow.
 - Preserve native scrolling, anchors, history, keyboard access, focus, and zoom. No scroll-jacking; smooth scrolling and pinning must retain user control.
-- Reduce or disable parallax, tilt, custom cursors, and expensive graphics on touch/mobile. Actions must not depend on hover.
+- Adapt parallax and expensive graphics to touch/mobile capabilities while preserving the selected profile's visual intent. Replace pointer-only tilt and custom cursors with suitable touch feedback. Actions must not depend on hover.
 - With `prefers-reduced-motion: reduce`, remove large displacement, parallax, spatial scrubbing, narrative pinning, and nonessential loops. Use immediate states or short fades where appropriate. Also respect preference changes during the session.
 - No intentional flashing. For content moving automatically for more than five seconds alongside other content, provide pause/stop/hide or make it static. Reduced-motion support alone does not replace that control.
 - Preserve semantics when splitting text into words or lines. Do not hide interactive elements or ancestors of focusable controls from screen readers.

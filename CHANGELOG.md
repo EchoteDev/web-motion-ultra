@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-11-07
 
-- Added ready-to-copy low-, medium-, and high-intensity prompts with expected outcomes and desktop/mobile direction.
+- Integrated LOW, MEDIUM, and HIGH intensity profiles directly into the skill.
+- Replaced long intensity prompts with a skill invocation and a single `Motion intensity:` line.
+- Set the Codex default prompt to the built-in MEDIUM profile.
 
 - Added dedicated installation and invocation instructions for Claude Code, Google Antigravity, Cursor, and GitHub Copilot.
 - Added a Compatible Agents section and links to official discovery documentation.
