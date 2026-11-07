@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Web Motion Ultra — purposeful motion, smooth interactions, desktop and mobile" width="100%">
+  <img src="assets/banner.png" alt="Web Motion Ultra — purposeful motion, smooth interactions, desktop and mobile" width="100%">
 </p>
 
 <h1 align="center">Web Motion Ultra</h1>
