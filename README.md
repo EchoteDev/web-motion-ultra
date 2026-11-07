@@ -21,6 +21,33 @@ An open-source AI coding skill for designing and implementing **smooth, purposef
 
 ## Quick start
 
+### Install with npx
+
+With Node.js and npm installed, run:
+
+```bash
+npx skills add EchoteDev/web-motion-ultra --skill web-motion-ultra
+```
+
+Follow the prompts to choose your coding agent. Add `-g` for a personal installation available across projects; omit it for the current project.
+
+### Update with npx
+
+If you installed the skill with the Skills CLI, update it with:
+
+```bash
+npx skills update web-motion-ultra
+```
+
+Choose the installation scope when prompted, or use `-g` for a personal installation and `-p` for the current project:
+
+```bash
+npx skills update web-motion-ultra -g
+npx skills update web-motion-ultra -p
+```
+
+See the [installation guide](docs/installation.md#install-with-the-skills-cli-npx) for Codex-specific commands and update options.
+
 ### Install through Codex
 
 Paste this into Codex:

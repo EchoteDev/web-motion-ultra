@@ -6,7 +6,27 @@
 - Git for the clone-based methods, or a ZIP extractor for the download method.
 - Browser tooling if you want actual interaction and performance verification.
 
-End users do not need Python, Node.js, or a package install to read and install this instruction-only skill. Your website may have its own development dependencies. Python and PyYAML are used only by this repository's contributor validation command.
+Manual installation and the Codex built-in installer do not require Node.js or npm. The optional `npx` method below requires both. End users do not need Python to use this instruction-only skill. Your website may have its own development dependencies. Python and PyYAML are used only by this repository's contributor validation command.
+
+## Install with the Skills CLI (npx)
+
+With Node.js and npm installed:
+
+```bash
+npx skills add EchoteDev/web-motion-ultra --skill web-motion-ultra
+```
+
+Follow the prompts to select your agent. The default installation is scoped to the current project. Add `-g` for a personal installation across projects. To install specifically for Codex:
+
+```bash
+# Current project
+npx skills add EchoteDev/web-motion-ultra --skill web-motion-ultra -a codex
+
+# Personal installation
+npx skills add EchoteDev/web-motion-ultra --skill web-motion-ultra -a codex -g
+```
+
+The CLI installs the skill and its supporting files and records its source for updates. Choose one installation method per scope to avoid duplicate copies. See the [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
 
 ## Codex: built-in installer
 
@@ -187,6 +207,28 @@ The Markdown instructions can be adapted to other coding agents that support ski
 If your client has no skill loader, ask it to read `skills/web-motion-ultra/SKILL.md` and the linked references before working on the website. This is a manual workflow, not a claim of native integration.
 
 ## Update
+
+### Skills CLI installations
+
+For a skill installed with `npx skills add`, run:
+
+```bash
+npx skills update web-motion-ultra
+```
+
+Choose the scope when prompted, or specify it explicitly:
+
+```bash
+# Personal installation
+npx skills update web-motion-ultra -g
+
+# Current project
+npx skills update web-motion-ultra -p
+```
+
+Back up local customizations first. Refresh skill discovery or restart your agent if necessary after updating. These commands manage installations tracked by the Skills CLI; use the procedure below for manual copies.
+
+### Manual installations
 
 1. Back up any local customizations to your installed skill.
 2. In your downloaded repository, run `git pull --ff-only` and review [CHANGELOG.md](../CHANGELOG.md).
