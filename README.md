@@ -202,6 +202,6 @@ Try it on a real project, report a reproducible failure, or submit a focused imp
 
 Created and maintained by [EchoteDev](https://github.com/EchoteDev). The skill grew from a motion-design brief and iterative refinement with an AI coding agent.
 
-The README organization was inspired by the clear presentation of [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill). Web Motion Ultra is an independent project, with its own instructions and scope; no affiliation or endorsement is implied.
+Web Motion Ultra is an independent project, with its own instructions and scope; no affiliation or endorsement is implied.
 
 MIT © 2026 EchoteDev. See [LICENSE](LICENSE). Third-party documentation and tools retain their respective licenses and terms.
