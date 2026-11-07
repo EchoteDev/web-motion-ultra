@@ -196,6 +196,7 @@ Web Motion Ultra uses the portable `SKILL.md` format. The following agents docum
 - **Google Antigravity** — workspace and global skills across App, CLI, and IDE.
 - **Cursor** — personal and project skills, automatic discovery, and manual selection.
 - **GitHub Copilot** — agent skills in supported Copilot experiences, including agent mode in VS Code and Copilot CLI.
+- **Any agent supporting Agent Skills**
 
 Compatibility here means the documented skill format and installation paths are supported. It does not mean this skill has been tested end to end inside every client. Browser verification depends on the tools available to that agent. `agents/openai.yaml` supplies Codex-specific metadata; other clients use the portable entry point and references.
 
