@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added dedicated installation and invocation instructions for Claude Code, Google Antigravity, Cursor, and GitHub Copilot.
+- Added a Compatible Agents section and links to official discovery documentation.
+
 ## 1.0.0 — 2026-11-07
 
 Initial public release.

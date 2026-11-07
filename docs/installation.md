@@ -68,6 +68,118 @@ You can commit this project-scoped skill folder to share it with your team.
 
 GitHub's **Code → Download ZIP** downloads the entire repository instead. In that archive, install only `skills/web-motion-ultra`.
 
+## Claude Code
+
+Clone this repository once and enter the clone before running the commands below:
+
+```bash
+git clone https://github.com/EchoteDev/web-motion-ultra.git
+cd web-motion-ultra
+```
+
+For a personal skill available across local projects (macOS/Linux):
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R skills/web-motion-ultra "$HOME/.claude/skills/"
+```
+
+For a project-only skill, copy the folder into `<your-website-project>/.claude/skills/web-motion-ultra/` instead. Invoke it in Claude Code:
+
+```text
+/web-motion-ultra Improve this website with smooth desktop and mobile animations.
+```
+
+See [Claude Code skill documentation](https://code.claude.com/docs/en/skills). These personal paths describe local Claude Code sessions; account-synced/cloud sessions have separate loading rules.
+
+## Google Antigravity
+
+From the repository clone, install a global skill (macOS/Linux):
+
+```bash
+mkdir -p "$HOME/.gemini/config/skills"
+cp -R skills/web-motion-ultra "$HOME/.gemini/config/skills/"
+```
+
+For a workspace skill, copy it into `<your-website-project>/.agents/skills/web-motion-ultra/`. Current Antigravity documentation uses `.agents/skills`; `.agent/skills` is a legacy compatibility path. App, CLI, and standalone IDE share the global location above.
+
+Ask the agent:
+
+```text
+Use the web-motion-ultra skill to improve this website's desktop and mobile motion.
+```
+
+The App and interactive CLI also support `/web-motion-ultra`. If adding a skill to a running CLI, use `/skills reload` or start a new conversation. In the standalone IDE, inspect discovered skills in the Customizations menu. See [Antigravity skill documentation](https://antigravity.google/docs/skills).
+
+## Cursor
+
+From the repository clone, install a personal skill (macOS/Linux):
+
+```bash
+mkdir -p "$HOME/.cursor/skills"
+cp -R skills/web-motion-ultra "$HOME/.cursor/skills/"
+```
+
+For a project skill, copy it into `<your-website-project>/.cursor/skills/web-motion-ultra/`. Cursor also supports `.agents/skills` project directories and `~/.agents/skills` personal directories; choose one active location rather than duplicating the skill.
+
+In Agent chat, type `/` and select `web-motion-ultra`, then describe the task. Local personal skills are not automatically available to every remote/cloud execution environment; use a project skill or follow Cursor's documented sync setup. See [Cursor skill documentation](https://cursor.com/docs/skills).
+
+## GitHub Copilot
+
+For a repository-scoped skill, copy the folder into:
+
+```text
+<your-website-project>/.github/skills/web-motion-ultra/
+```
+
+For example, from your website project root (macOS/Linux):
+
+```bash
+mkdir -p .github/skills
+cp -R /path/to/web-motion-ultra/skills/web-motion-ultra .github/skills/
+```
+
+Replace `/path/to/web-motion-ultra` with the actual clone location. Commit the project skill if it should be available to repository-based Copilot workflows.
+
+For a personal local skill, from the downloaded repository clone:
+
+```bash
+mkdir -p "$HOME/.copilot/skills"
+cp -R skills/web-motion-ultra "$HOME/.copilot/skills/"
+```
+
+In a supported Copilot agent experience, ask:
+
+```text
+Use the web-motion-ultra skill to add purposeful, smooth animations to this website.
+```
+
+Copilot loads relevant skills based on their descriptions. Skill support is documented for Copilot cloud agent, code review, CLI, app, and agent mode in VS Code; the ability to implement and browser-test a site depends on the selected experience. See [GitHub Copilot skill documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
+
+## Windows PowerShell: additional agents
+
+From the downloaded repository clone, choose **one** destination for your agent:
+
+| Agent | Personal destination | Project destination |
+| --- | --- | --- |
+| Claude Code | `$HOME/.claude/skills` | `<project>/.claude/skills` |
+| Antigravity | `$HOME/.gemini/config/skills` | `<project>/.agents/skills` |
+| Cursor | `$HOME/.cursor/skills` | `<project>/.cursor/skills` |
+| Copilot | `$HOME/.copilot/skills` | `<project>/.github/skills` |
+
+Set `$skillParent` to that location. This example installs for Claude Code:
+
+```powershell
+$skillParent = Join-Path $HOME '.claude/skills'
+New-Item -ItemType Directory -Force -Path $skillParent | Out-Null
+if (Test-Path (Join-Path $skillParent 'web-motion-ultra')) {
+    throw 'Skill already exists. Follow the update instructions instead.'
+}
+Copy-Item -Recurse './skills/web-motion-ultra' $skillParent
+```
+
+Before any macOS/Linux copy above, confirm the destination's `web-motion-ultra` folder does not exist. If it does, follow the update procedure instead. Copy the complete folder so linked references remain available. `SKILL.md` must sit directly inside `web-motion-ultra`, without an extra nested copy.
+
 ## Other coding agents
 
 The Markdown instructions can be adapted to other coding agents that support skills. Consult that agent's current documentation for its discovery directory and invocation syntax. Copy the complete skill folder, including references. Do not assume Codex's `$` invocation syntax or `agents/openai.yaml` metadata is interpreted by every client.
@@ -80,7 +192,7 @@ If your client has no skill loader, ask it to read `skills/web-motion-ultra/SKIL
 2. In your downloaded repository, run `git pull --ff-only` and review [CHANGELOG.md](../CHANGELOG.md).
 3. Move the old installed folder to a backup location **outside skill-discovery directories**.
 4. Copy the new `skills/web-motion-ultra` folder into the same installation location.
-5. Invoke `$web-motion-ultra` again; restart Codex if discovery has not refreshed.
+5. Invoke or select the skill using your agent's syntax above; refresh discovery or restart the agent if needed.
 
 For reproducible installs, use a release tag rather than `main`: clone with `git clone --branch v1.0.0 --depth 1 https://github.com/EchoteDev/web-motion-ultra.git`. Check out newer release tags explicitly when updating a tag-based clone.
 

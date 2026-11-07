@@ -17,7 +17,7 @@ An open-source AI coding skill for designing and implementing **smooth, purposef
 
 **Ultra means precision:** thoughtful timing, interruptible transitions, touch-aware behavior, and measured performance. The skill chooses effects to fit your content and brand.
 
-[Quick start](#quick-start) · [Features](#features) · [How it works](#how-it-works) · [Example prompts](#example-prompts) · [Installation guide](docs/installation.md) · [Contributing](CONTRIBUTING.md)
+[Quick start](#quick-start) · [Installation](#installation) · [Compatible Agents](#compatible-agents) · [Features](#features) · [How it works](#how-it-works) · [Example prompts](#example-prompts) · [Installation guide](docs/installation.md) · [Contributing](CONTRIBUTING.md)
 
 ## Quick start
 
@@ -56,6 +56,20 @@ cp -R web-motion-ultra/skills/web-motion-ultra "$HOME/.agents/skills/"
 ```
 
 Use this copy command for a **first installation** when the destination does not already exist. The [installation guide](docs/installation.md) covers project-only installation, Windows, ZIP downloads, updates, and removal.
+
+## Installation
+
+Install the **whole** `skills/web-motion-ultra` folder, including its references. Choose the instructions for your agent:
+
+| Agent | Installation instructions | Invocation |
+| --- | --- | --- |
+| Codex | [Built-in installer or manual copy](docs/installation.md#codex-built-in-installer) | `$web-motion-ultra` |
+| Claude Code | [Personal or project skill](docs/installation.md#claude-code) | `/web-motion-ultra` |
+| Google Antigravity | [Workspace or global skill](docs/installation.md#google-antigravity) | Mention `web-motion-ultra`; App/CLI also support `/web-motion-ultra` |
+| Cursor | [Personal or project skill](docs/installation.md#cursor) | Type `/` and select `web-motion-ultra` |
+| GitHub Copilot | [Repository or personal skill](docs/installation.md#github-copilot) | Ask Copilot to use `web-motion-ultra`; it loads relevant skills |
+
+The guide includes copy commands for each agent and a Windows PowerShell alternative. Codex's `$skill-installer` command is specific to Codex; the other agents use their own skill directories and discovery mechanisms.
 
 ## Features
 
@@ -150,7 +164,21 @@ Fix the causes, preserve the visual intent, and report what was tested.
 
 More briefs, checkpoint usage, and expected outputs are in [the prompt cookbook](docs/prompt-cookbook.md).
 
-## Stack and agent compatibility
+## Compatible Agents
+
+Web Motion Ultra uses the portable `SKILL.md` format. The following agents document support for this format and have dedicated installation instructions in this repository:
+
+- **Codex** — explicit `$web-motion-ultra` invocation and included Codex UI metadata.
+- **Claude Code** — personal and project skills with `/web-motion-ultra` invocation.
+- **Google Antigravity** — workspace and global skills across App, CLI, and IDE.
+- **Cursor** — personal and project skills, automatic discovery, and manual selection.
+- **GitHub Copilot** — agent skills in supported Copilot experiences, including agent mode in VS Code and Copilot CLI.
+
+Compatibility here means the documented skill format and installation paths are supported. It does not mean this skill has been tested end to end inside every client. Browser verification depends on the tools available to that agent. `agents/openai.yaml` supplies Codex-specific metadata; other clients use the portable entry point and references.
+
+Sources: [Codex](https://learn.chatgpt.com/docs/build-skills), [Claude Code](https://code.claude.com/docs/en/skills), [Antigravity](https://antigravity.google/docs/skills), [Cursor](https://cursor.com/docs/skills), [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
+
+## Stack compatibility
 
 The skill is **instruction-based Markdown**, with Codex UI metadata. It ships no browser runtime, animation engine, npm package, paid service, or API key requirement. Your coding agent needs access to the website project to implement changes; browser tools are needed to exercise and measure the result.
 
@@ -161,8 +189,6 @@ The skill is **instruction-based Markdown**, with Codex UI metadata. It ships no
 | React with Motion/Framer Motion | Reuse when already adopted or requested |
 | Lenis | Optional smooth-scroll integration when justified |
 | Other web frameworks | Follow the project's components and lifecycle; verify library-specific APIs |
-| Codex | Includes explicit `$web-motion-ultra` invocation and UI metadata |
-| Other coding agents | Portable instructions; installation and invocation depend on the agent |
 
 This repository does not claim automated compatibility testing across every agent or framework. No specific animation library is installed merely by adding the skill.
 
