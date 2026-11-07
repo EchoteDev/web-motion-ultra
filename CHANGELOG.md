@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added ready-to-copy low-, medium-, and high-intensity prompts with expected outcomes and desktop/mobile direction.
+
 - Added dedicated installation and invocation instructions for Claude Code, Google Antigravity, Cursor, and GitHub Copilot.
 - Added a Compatible Agents section and links to official discovery documentation.
 

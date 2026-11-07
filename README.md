@@ -133,6 +133,18 @@ This is an illustrative plan, not a recorded benchmark or completed site demo.
 
 ## Example prompts
 
+### Choose low, medium, or high intensity
+
+Start with one of the [three ready-to-copy intensity prompts](docs/prompt-cookbook.md#choose-your-motion-intensity):
+
+| Intensity | Result to request | Prompt |
+| --- | --- | --- |
+| **Low** | Subtle polish, small reveals, gentle feedback, stable reading areas | [Low intensity](docs/prompt-cookbook.md#1-low-intensity--subtle-and-refined) |
+| **Medium** | An orchestrated hero, varied reveals, and one signature moment | [Medium intensity](docs/prompt-cookbook.md#2-medium-intensity--balanced-and-engaging) |
+| **High** | Rich, expressive choreography, layered reveals, and distinctive transitions on desktop and mobile | [High intensity](docs/prompt-cookbook.md#3-high-intensity--rich-and-expressive) |
+
+Each prompt explains the intended outcome, desktop/touch adaptation, and verification. Intensity is a creative choice; reduced motion follows the user's accessibility preference at every level.
+
 ### Enhance an existing site
 
 ```text
